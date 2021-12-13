@@ -1,15 +1,13 @@
-import React, { useState, useContext, useEffect } from "react";
-import { StudentContext } from "../App";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 function EditStudent() {
   useEffect(() => {
-    {
+    
       console.log(params);
       if (params.id) {
         console.log(params.id);
         getData();
-      }
-    }
+      }  
   }, []);
 
   let navigate = useNavigate();
@@ -82,21 +80,21 @@ function EditStudent() {
           <input
             type="text"
             value={name}
-            class="form-control"
+            className="form-control"
             onChange={(e) => setName(e.target.value)}
             placeholder="Name"
           />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label for="exampleInputEmail1">Email address</label>
           <input
             type="email"
             value={email}
-            class="form-control"
+            className="form-control"
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter email"
           />
-          <small id="emailHelp" class="form-text text-muted">
+          <small id="emailHelp" className="form-text text-muted">
             We'll never share your email with anyone else.
           </small>
         </div>
@@ -105,7 +103,7 @@ function EditStudent() {
           <input
             type="text"
             value={mobile}
-            class="form-control"
+            className="form-control"
             onChange={(e) => setMobile(e.target.value)}
             placeholder="Mobile"
           />
@@ -115,7 +113,7 @@ function EditStudent() {
           <input
             type="text"
             value={degree}
-            class="form-control"
+            className="form-control"
             onChange={(e) => setDegree(e.target.value)}
             placeholder="Degree"
           />
@@ -125,7 +123,7 @@ function EditStudent() {
           <input
             type="text"
             value={dept}
-            class="form-control"
+            className="form-control"
             onChange={(e) => setDept(e.target.value)}
             placeholder="Department"
           />

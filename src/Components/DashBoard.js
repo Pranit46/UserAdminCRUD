@@ -3,40 +3,40 @@ import React from "react";
 function DashBoard(props) {
   return (
     <div>
-      <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content-wrapper" className="d-flex flex-column">
         {/* <!-- Main Content --> */}
         <div id="content">
           {/* <!-- Begin Page Content --> */}
-          <div class="container-fluid">
+          <div className="container-fluid">
             {/* <!-- Page Heading --> */}
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-              <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+            <div className="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
               <a
-                href="#"
-                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                href="/"
+                className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
               >
-                <i class="fas fa-download fa-sm text-white-50"></i> Generate
+                <i className="fas fa-download fa-sm text-white-50"></i> Generate
                 Report
               </a>
             </div>
 
             {/* <!-- Content Row --> */}
-            <div class="row">
+            <div className="row">
               {/* <!-- Earnings (Monthly) Card Example --> */}
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-primary shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+              <div className="col-xl-3 col-md-6 mb-4">
+                <div className="card border-left-primary shadow h-100 py-2">
+                  <div className="card-body">
+                    <div className="row no-gutters align-items-center">
+                      <div className="col mr-2">
+                        <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">
                           Earnings (Monthly)
                         </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <div className="h5 mb-0 font-weight-bold text-gray-800">
                           ${props.value.earnings}
                         </div>
                       </div>
-                      <div class="col-auto">
-                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                      <div className="col-auto">
+                        <i className="fas fa-calendar fa-2x text-gray-300"></i>
                       </div>
                     </div>
                   </div>
@@ -44,20 +44,20 @@ function DashBoard(props) {
               </div>
 
               {/* <!-- Earnings (Monthly) Card Example --> */}
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-success shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+              <div className="col-xl-3 col-md-6 mb-4">
+                <div className="card border-left-success shadow h-100 py-2">
+                  <div className="card-body">
+                    <div className="row no-gutters align-items-center">
+                      <div className="col mr-2">
+                        <div className="text-xs font-weight-bold text-success text-uppercase mb-1">
                           Earnings (Annual)
                         </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <div className="h5 mb-0 font-weight-bold text-gray-800">
                           ${props.value.earnAnnual}
                         </div>
                       </div>
-                      <div class="col-auto">
-                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                      <div className="col-auto">
+                        <i className="fas fa-dollar-sign fa-2x text-gray-300"></i>
                       </div>
                     </div>
                   </div>
@@ -65,24 +65,24 @@ function DashBoard(props) {
               </div>
 
               {/* <!-- Earnings (Monthly) Card Example --> */}
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-info shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+              <div className="col-xl-3 col-md-6 mb-4">
+                <div className="card border-left-info shadow h-100 py-2">
+                  <div className="card-body">
+                    <div className="row no-gutters align-items-center">
+                      <div className="col mr-2">
+                        <div className="text-xs font-weight-bold text-info text-uppercase mb-1">
                           Tasks
                         </div>
-                        <div class="row no-gutters align-items-center">
-                          <div class="col-auto">
-                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                        <div className="row no-gutters align-items-center">
+                          <div className="col-auto">
+                            <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">
                               {props.value.task}%
                             </div>
                           </div>
-                          <div class="col">
-                            <div class="progress progress-sm mr-2">
+                          <div className="col">
+                            <div className="progress progress-sm mr-2">
                               <div
-                                class="progress-bar bg-info"
+                                className="progress-bar bg-info"
                                 role="progressbar"
                                 style={{ width: "50%" }}
                                 aria-valuenow={props.value.task}
@@ -93,8 +93,8 @@ function DashBoard(props) {
                           </div>
                         </div>
                       </div>
-                      <div class="col-auto">
-                        <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                      <div className="col-auto">
+                        <i className="fas fa-clipboard-list fa-2x text-gray-300"></i>
                       </div>
                     </div>
                   </div>
@@ -102,20 +102,20 @@ function DashBoard(props) {
               </div>
 
               {/* <!-- Pending Requests Card Example --> */}
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+              <div className="col-xl-3 col-md-6 mb-4">
+                <div className="card border-left-warning shadow h-100 py-2">
+                  <div className="card-body">
+                    <div className="row no-gutters align-items-center">
+                      <div className="col mr-2">
+                        <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">
                           Pending Requests
                         </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <div className="h5 mb-0 font-weight-bold text-gray-800">
                           {props.value.pending}
                         </div>
                       </div>
-                      <div class="col-auto">
-                        <i class="fas fa-comments fa-2x text-gray-300"></i>
+                      <div className="col-auto">
+                        <i className="fas fa-comments fa-2x text-gray-300"></i>
                       </div>
                     </div>
                   </div>

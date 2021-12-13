@@ -1,6 +1,4 @@
-import React, { useContext, useState,useEffect } from "react";
-import { StudentContext } from "../App";
-import { Link } from "react-router-dom";
+import React, { useState,useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -71,7 +69,7 @@ function AllStudents() {
 
   return (
     <div>
-      <table class="table table-striped">
+      <table className="table table-striped">
         <thead>
           <tr>
             <th scope="col">Sr. No</th>
@@ -87,7 +85,7 @@ function AllStudents() {
           {data.map((e, i) => {
             return (
               <>
-                <tr key={i}>
+                <tr key={e.id}>
                   <th scope="row">{i + 1}</th>
                   <td>{e.name}</td>
                   <td>{e.degree}</td>
