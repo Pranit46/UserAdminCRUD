@@ -20,20 +20,58 @@ function EditStudent() {
   let [degree, setDegree] = useState("");
   let [dept, setDept] = useState("");
 
-  let handleSave = () => {
-    navigate("/AllStudents");
-  };
+  // let handleSave = () => {
+  //   navigate("/AllStudents");
+  // };
 
-  let getData = async () => {
-    await fetch(
-      "https://614eabfab4f6d30017b482c4.mockapi.io/studentDetail/" + params.id
-    )
-      .then((response) => response.json())
-      .then((res) => console.log(res))
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  let handleSave = async()=>{
+    await fetch('https://614eabfab4f6d30017b482c4.mockapi.io/studentDetail/'+params.id,{
+        method:'PUT',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({
+            name,
+            email,
+            mobile,
+            degree,
+            dept
+        })
+    })
+    .then(response =>response.json())
+    .then(data=>{
+        navigate('/AllStudents')
+    })
+    .catch((error)=>{
+        console.log(error)
+    })
+}
+
+  // let getData = async () => {
+  //   await fetch(
+  //     "https://614eabfab4f6d30017b482c4.mockapi.io/studentDetail/" + params.id
+  //   )
+  //     .then((response) => response.json())
+  //     .then((res) => console.log(res))
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
+
+  let getData = async()=>{
+    await fetch('https://614eabfab4f6d30017b482c4.mockapi.io/studentDetail/'+params.id)
+    .then(response =>response.json())
+    .then(data=>{
+        setName(data.name)
+        setEmail(data.email)
+        setMobile(data.mobile)
+        setDegree(data.degree)
+        setDept(data.dept)
+    })
+    .catch((error)=>{
+        console.log(error)
+    })
+}
 
   return (
     <div>
